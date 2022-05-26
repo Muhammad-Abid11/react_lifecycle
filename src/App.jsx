@@ -25,9 +25,15 @@ class App extends React.Component {
     // }
   }
 
-  // shouldComponentUpdate() {
-
-  // }
+  shouldComponentUpdate() {
+    // it stop render when return false
+    if (this.state.count < 5) {
+      return true
+    } else {
+      alert("Now Render not work but console works")
+      return false
+    }
+  }
 
   componentDidMount() { //downside render its not work
     console.log(" 4.componentDidMount ")

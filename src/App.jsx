@@ -51,11 +51,12 @@ class App extends React.Component {
     console.log("Now 2 components again run due to me array and count update")
   }
 
-  getSnapshotBeforeUpdate(preProps, preState) {
+  getSnapshotBeforeUpdate(preProps, preState) { //little use
     console.log("getSnapshotBeforeUpdate==> previous state", preState)
+    return 10
   }
-  componentDidUpdate() {
-
+  componentDidUpdate(preProps, preState, snapshotReturn) { //little use
+    console.log("value from getsnap return recieve here ", snapshotReturn)
   }
 
 

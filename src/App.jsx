@@ -51,6 +51,15 @@ class App extends React.Component {
     console.log("Now 2 components again run due to me array and count update")
   }
 
+  getSnapshotBeforeUpdate(preProps, preState) {
+    console.log("getSnapshotBeforeUpdate==> previous state", preState)
+  }
+  componentDidUpdate() {
+
+  }
+
+
+
   render() {
 
     console.log(" 3.render...")
@@ -76,13 +85,6 @@ class App extends React.Component {
   }
 }
 
-// getSnapshotBeforeUpdate(){
-
-// }
-
-// componentDidUpdate(){
-
-// }
 
 
 

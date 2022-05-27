@@ -78,7 +78,7 @@ class App extends React.Component {
 
         {/* <h1>{this.state.count}</h1> */}
 
-        <Child count={this.state.count} />
+        {this.state.count < 5 && <Child count={this.state.count} />}
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>count up</button>
         <button onClick={() => this.setState({ count: this.state.count - 1 })}>count down</button>
       </div>

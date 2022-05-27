@@ -15,6 +15,10 @@ export default class Child extends React.Component {
         return null // return mendatory because it is static ,here 'this' is undefined
     }
 
+    componentWillUnmount() {
+        alert("Child component bye bye")
+    }
+
     render() {
         return (
             <div>
